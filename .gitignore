@@ -1,0 +1,15 @@
+# Raw third-party data — see data/SOURCES.md to reproduce
+data/raw/*
+!data/raw/**/.gitkeep
+
+# Power BI
+powerbi/*.pbix
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# macOS
+.DS_Store
