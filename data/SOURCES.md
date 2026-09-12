@@ -53,3 +53,29 @@
 **Outputs**
 - data/processed/dim_cyclone_event.csv (27 events)
 - data/processed/cyclone_track_points.csv (958 points)
+
+### Pilbara Ports monthly cargo statistics
+- Landing pages (saved manually, see method below):
+  - https://www.pilbaraports.com.au/ports/port-of-port-hedland/about-port-of-hedland/port-statistics-and-reports
+  - https://www.pilbaraports.com.au/ports/port-of-dampier/about-port-of-dampier/port-statistics-and-reports
+- Retrieved: 2026-09-02
+- Licence: Pilbara Ports Authority, Government of Western Australia
+- Tier: A (real, published)
+- Script: src/step2_pilbara_ports.py (v3)
+
+**Method**
+- The statistics pages block automated requests, returning no content links
+  even though the published page is plain HTML rather than JavaScript
+  rendered. The pages were therefore saved from a browser and parsed locally;
+  only the PDFs were fetched over the network.
+- Each month link is assigned the year heading closest before it in the raw
+  HTML. The year cannot be taken from the URL, because several entries point
+  into a media folder for an unrelated year.
+- Port Hedland labels sections by calendar year; Dampier labels them by
+  financial year ("2025-26"). For span labels, July to December map to the
+  first year and January to June to the second.
+- Only tonnage reports were collected. Cargo-by-destination reports were
+  skipped as they are not used in this analysis.
+
+**Output**
+- data/processed/fact_port_throughput.csv (138 rows from 138 PDFs)

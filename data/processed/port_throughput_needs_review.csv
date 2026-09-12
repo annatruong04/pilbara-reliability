@@ -1,0 +1,2 @@
+port,year,month_num,month,source_url,source_file,retrieved,data_tier,total_throughput_t,iron_ore_t,vessel_arrivals,parse_note,total_throughput_mt,iron_ore_mt
+port_hedland,2016,2,2016-02-01,"https://www.pilbaraports.com.au/pilbaraportsauthority/media/documents/port%20of%20port%20hedland/about%20the%20port%20of%20port%20hedland/port%20statistics%20and%20reports/cargo%20weights%20by%20cargo%20type/2016/cargo,-grt-and-dwt-statistics-by-commodity-type_feb-2016.pdf",2016-02.pdf,2026-09-02,A,,,222.0,total throughput not found; see the .txt dump,,
